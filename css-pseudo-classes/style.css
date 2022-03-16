@@ -1,0 +1,25 @@
+button {
+  padding: 10px;
+  border: 1px solid;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+table * {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: lightgray;
+}
