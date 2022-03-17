@@ -1,4 +1,4 @@
-div.display-area {
+div.container {
   max-width: 800px;
   margin: auto;
   font-family: sans-serif;
@@ -8,15 +8,19 @@ div.row {
   display: flex;
 }
 
-img.second-row {
-  width: 200px;
-}
-
 h1,
 h2 {
   font-weight: bold;
 }
 
-img.first-row {
-  width: 270px;
+.column-one-fourth {
+  width: calc(800px / 4);
+}
+
+.column-one-third {
+  width: calc(800px / 3);
+}
+
+.column-two-third {
+  width: calc(2 * 800px / 3);
 }
