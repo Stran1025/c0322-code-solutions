@@ -1,0 +1,22 @@
+div.display-area {
+  max-width: 800px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+div.row {
+  display: flex;
+}
+
+img.second-row {
+  width: 200px;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+img.first-row {
+  width: 270px;
+}
