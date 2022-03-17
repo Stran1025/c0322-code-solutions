@@ -25,7 +25,7 @@ select {
   font-size: 14px;
   margin-bottom: 20px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid #d2d4d4;
 }
 
 select {
