@@ -18,10 +18,6 @@ body {
   flex-basis: 100%;
 }
 
-.row-two {
-  display: flex;
-}
-
 .col-half {
   flex-basis: 50%;
 }
@@ -35,7 +31,10 @@ body {
 }
 
 .reading-text {
-  color: #8f8f8f;
+  color: #7e7e7e;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 26px;
 }
 
 .align-left {
@@ -44,6 +43,7 @@ body {
 
 h1 {
   font-size: 48px;
+  margin-top: 30px;
 }
 
 .title-row {
@@ -57,4 +57,39 @@ h1 {
 
 h2 {
   font-size: 14px;
+  margin-top: 25px;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+img {
+  width: 90px;
+}
+
+.title-margin {
+  margin-top: 100px;
+}
+
+.padding-right {
+  padding-right: 45px;
+}
+
+.button {
+  color: rgb(214 98 92);
+  border: 2px solid rgb(214 98 92);
+  padding: 8px 30px;
+  background-color: white;
+  font-size: 14px;
+
+  /* font-weight: bold; */
+}
+
+.sharp-corner {
+  border-radius: 0;
+}
+
+.margin-bottom {
+  margin-bottom: 20px;
 }
