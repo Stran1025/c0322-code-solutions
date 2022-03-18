@@ -1,26 +1,33 @@
-div.container {
-  max-width: 800px;
-  margin: auto;
+body {
   font-family: sans-serif;
 }
 
-div.row {
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.row {
   display: flex;
 }
 
-h1,
-h2 {
-  font-weight: bold;
-}
-
-.column-one-fourth {
-  width: calc(800px / 4);
+.column-full {
+  width: 100%;
 }
 
 .column-one-third {
-  width: calc(800px / 3);
+  width: calc(100% / 3);
+}
+
+.column-one-fourth {
+  width: 25%;
 }
 
 .column-two-third {
-  width: calc(2 * 800px / 3);
+  width: calc(100% / 1.5);
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
