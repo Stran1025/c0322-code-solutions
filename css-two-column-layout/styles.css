@@ -1,0 +1,44 @@
+body {
+  font-family: Karla, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  max-width: 800px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.row-two {
+  display: flex;
+}
+
+.col-half {
+  flex-basis: 50%;
+}
+
+.col-fourth {
+  flex-basis: 25%;
+}
+
+.col-three-fourth {
+  flex-basis: 75%;
+}
+
+.reading-text {
+  color: #8f8f8f;
+}
+
+.align-left {
+  text-align: left;
+}
