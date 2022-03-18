@@ -12,7 +12,6 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  text-align: center;
 }
 
 .col-full {
@@ -41,4 +40,21 @@ body {
 
 .align-left {
   text-align: left;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.title-row {
+  width: 80%;
+  margin: auto;
+}
+
+.centered-content {
+  text-align: center;
+}
+
+h2 {
+  font-size: 14px;
 }
