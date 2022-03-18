@@ -6,10 +6,6 @@ body {
 .container {
   margin: auto;
   width: 75%;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  flex-direction: column;
 }
 
 .row {
@@ -23,13 +19,10 @@ body {
 
 .column-one-third {
   flex-basis: 28%;
-  padding: 10px;
 }
 
 .column-full {
   flex-basis: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .circle {
@@ -73,4 +66,12 @@ h2 {
 
 .gray-text {
   color: lightgray;
+}
+
+.margin-top {
+  margin-top: 100px;
+}
+
+.padded-10 {
+  padding: 10px;
 }
