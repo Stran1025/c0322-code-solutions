@@ -10,8 +10,6 @@ body {
 
 .row {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 .col-full {
@@ -62,6 +60,11 @@ h2 {
 
 .no-wrap {
   flex-wrap: nowrap;
+}
+
+.wrap-row {
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 img {
