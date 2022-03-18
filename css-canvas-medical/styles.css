@@ -1,0 +1,20 @@
+.container {
+  margin: auto;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.background-off-white {
+  background-color: rgb(250 250 250);
+}
+
+.light-background-text {
+  color: rgb(130 130 130);
+}
