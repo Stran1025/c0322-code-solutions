@@ -6,14 +6,19 @@ body {
   border: 1px solid black;
 } */
 
-img {
-  width: 90%;
+.hero {
+  width: 100%;
+  height: 90%;
 }
 
 .container {
   margin: auto;
   width: 100%;
   max-width: 800px;
+}
+
+.width-half {
+  width: 50%;
 }
 
 .row {
@@ -28,8 +33,16 @@ img {
   width: 50%;
 }
 
+.col-fourth {
+  width: 25%;
+}
+
 .background-off-white {
   background-color: rgb(250 250 250);
+}
+
+.background-gray {
+  background-color: rgb(82 83 81);
 }
 
 .light-background-text {
@@ -38,6 +51,10 @@ img {
 
 .padding {
   padding: 20px;
+}
+
+.small-padding {
+  padding: 5px;
 }
 
 .center-block {
@@ -52,8 +69,12 @@ img {
   text-align: center;
 }
 
-.font-12 {
-  font-size: 12px;
+.content-left {
+  text-align: left;
+}
+
+.content-box {
+  box-sizing: content-box;
 }
 
 .white-text {
@@ -75,6 +96,26 @@ img {
   font-family: "Tiempos Headline", serif;
 }
 
+.font-25 {
+  font-size: 25px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.font-11 {
+  font-size: 11px;
+}
+
+.font-10 {
+  font-size: 10px;
+}
+
 .less-bold {
   font-weight: 300;
 }
@@ -87,12 +128,28 @@ img {
   margin: 0;
 }
 
+.top-space {
+  margin-top: 40px;
+}
+
+.indent {
+  margin-left: 20px;
+}
+
 .double-space {
   line-height: 2;
 }
 
+.one-half-space {
+  line-height: 1.5;
+}
+
 .wrap {
   flex-wrap: wrap;
+}
+
+.flex {
+  display: flex;
 }
 
 .p-relative {
@@ -101,4 +158,28 @@ img {
 
 .p-absolute {
   position: absolute;
+}
+
+.layer-element {
+  bottom: 100px;
+  right: 40%;
+  left: 10%;
+}
+
+.bottom-line {
+  border-bottom: 1px solid rgb(130 130 130);
+}
+
+.overlay {
+  background: linear-gradient(transparent, rgb(0 0 0 / 50%));
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 25px;
+  z-index: auto;
+}
+
+.forward {
+  z-index: 1;
 }
