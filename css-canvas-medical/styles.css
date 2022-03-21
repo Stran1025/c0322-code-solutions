@@ -1,0 +1,200 @@
+body {
+  font-family: Avenir, serif;
+}
+
+/* * div {
+  border: 1px solid black;
+} */
+
+.hero {
+  width: 100%;
+  height: 90%;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.width-half {
+  width: 50%;
+}
+
+.row {
+  display: flex;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-fourth {
+  width: 25%;
+}
+
+.col-three-fourth {
+  width: 75%;
+}
+
+.background-off-white {
+  background-color: rgb(250 250 250);
+}
+
+.background-gray {
+  background-color: rgb(82 83 81);
+}
+
+.light-background-text {
+  color: rgb(130 130 130);
+}
+
+.padding {
+  padding: 20px;
+}
+
+.small-padding {
+  padding: 5px;
+}
+
+.center-block {
+  margin: auto;
+}
+
+.content-right {
+  text-align: right;
+}
+
+.content-center {
+  text-align: center;
+}
+
+.content-left {
+  text-align: left;
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+
+.white-text {
+  color: white;
+}
+
+.button {
+  background-color: rgb(41 68 100);
+  border: 1px solid rgb(41 68 100);
+  border-radius: 3px;
+  padding: 10px 30px;
+}
+
+.small-button {
+  background-color: rgb(41 68 100);
+  border: 1px solid rgb(41 68 100);
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.font-sans-serif {
+  font-family: sans-serif;
+}
+
+.font-custom {
+  font-family: "Tiempos Headline", serif;
+}
+
+.font-25 {
+  font-size: 25px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.font-11 {
+  font-size: 11px;
+}
+
+.font-10 {
+  font-size: 10px;
+}
+
+.less-bold {
+  font-weight: 300;
+}
+
+.font-title {
+  font-size: 20px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.top-space {
+  margin-top: 40px;
+}
+
+.indent {
+  margin-left: 20px;
+}
+
+.double-space {
+  line-height: 2;
+}
+
+.one-half-space {
+  line-height: 1.5;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.layer-element {
+  bottom: 100px;
+  right: 40%;
+  left: 10%;
+}
+
+.bottom-line {
+  border-bottom: 1px solid rgb(130 130 130);
+}
+
+.overlay {
+  background: linear-gradient(transparent, rgb(0 0 0 / 50%));
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 25px;
+  z-index: auto;
+}
+
+.forward {
+  z-index: 1;
+}
