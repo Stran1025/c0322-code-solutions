@@ -37,6 +37,10 @@ body {
   width: 25%;
 }
 
+.col-three-fourth {
+  width: 75%;
+}
+
 .background-off-white {
   background-color: rgb(250 250 250);
 }
@@ -150,6 +154,10 @@ body {
 
 .flex {
   display: flex;
+}
+
+.block {
+  display: block;
 }
 
 .p-relative {
