@@ -10,8 +10,7 @@
 function isUnderFive(number) {
   if (number < 5) {
     return true;
-  }
-  if (number >= 5) {
+  } else {
     return false;
   }
 }
@@ -20,8 +19,7 @@ function isEven(number) {
   var leftOver = number % 2;
   if (leftOver === 1) {
     return false;
-  }
-  if (leftOver === 0) {
+  } else {
     return true;
   }
 }
@@ -29,8 +27,7 @@ function isEven(number) {
 function startsWithJ(string) {
   if (string[0] === 'J') {
     return true;
-  }
-  if (string[0] !== 'J') {
+  } else {
     return false;
   }
 }
@@ -38,8 +35,7 @@ function startsWithJ(string) {
 function isOldEnoughToDrink(person) {
   if (person.age >= 21) {
     return true;
-  }
-  if (person.age < 21) {
+  } else {
     return false;
   }
 }
@@ -47,8 +43,7 @@ function isOldEnoughToDrink(person) {
 function isOldEnoughToDrive(person) {
   if (person.age >= 16) {
     return true;
-  }
-  if (person.age < 16) {
+  } else {
     return false;
   }
 }
@@ -63,11 +58,9 @@ function isOldEnoughToDrinkAndDrive(person) {
 function categorizeAcidity(pH) {
   if (pH === 7) {
     return 'neutral';
-  }
-  if (pH >= 0 && pH < 7) {
+  } else if (pH >= 0 && pH < 7) {
     return 'acid';
-  }
-  if (pH <= 14 && pH > 7) {
+  } else if (pH <= 14 && pH > 7) {
     return 'base';
   }
   return 'invalid pH level';
@@ -76,11 +69,9 @@ function categorizeAcidity(pH) {
 function introduceWarnerBro(name) {
   if (name === 'yakko' || name === 'wakko') {
     return 'We\'re the warner brothers!';
-  }
-  if (name === 'dot') {
+  } else if (name === 'dot') {
     return 'I\'m cute~';
-  }
-  if (name !== 'dot' && name !== 'yakko' && name !== 'wakko') {
+  } else {
     return 'Goodnight everybody!';
   }
 }
