@@ -8,3 +8,11 @@ input {
 .small-top-space {
   margin-top: 10px;
 }
+
+.heading-color {
+  color: rgb(80 81 79);
+}
+
+.number-color {
+  color: rgb(10 71 111);
+}
