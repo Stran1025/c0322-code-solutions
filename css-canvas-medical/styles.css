@@ -2,9 +2,9 @@ body {
   font-family: Avenir, serif;
 }
 
-/* * div {
+* div {
   border: 1px solid black;
-} */
+}
 
 .hero {
   width: 100%;
@@ -19,6 +19,10 @@ body {
 
 .width-half {
   width: 50%;
+}
+
+.width-full {
+  width: 100%;
 }
 
 .row {
@@ -141,6 +145,10 @@ body {
 
 .top-space {
   margin-top: 40px;
+}
+
+.small-top-space {
+  margin-top: 10px;
 }
 
 .indent {
