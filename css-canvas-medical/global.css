@@ -2,27 +2,10 @@ body {
   font-family: Avenir, serif;
 }
 
-/* * div {
-  border: 1px solid black;
-} */
-
-.hero {
-  width: 100%;
-  height: 90%;
-}
-
 .container {
   margin: auto;
   width: 100%;
   max-width: 800px;
-}
-
-.width-half {
-  width: 50%;
-}
-
-.width-full {
-  width: 100%;
 }
 
 .row {
@@ -43,6 +26,14 @@ body {
 
 .col-three-fourth {
   width: 75%;
+}
+
+.width-half {
+  width: 50%;
+}
+
+.width-full {
+  width: 100%;
 }
 
 .background-off-white {
@@ -175,38 +166,10 @@ body {
   display: block;
 }
 
-.p-relative {
-  position: relative;
-}
-
-.p-absolute {
-  position: absolute;
-}
-
-.layer-element {
-  bottom: 100px;
-  right: 40%;
-  left: 10%;
-}
-
 .bottom-line {
   border-bottom: 1px solid rgb(130 130 130);
 }
 
 .top-line {
   border-top: 1px solid rgb(236 236 236);
-}
-
-.overlay {
-  background: linear-gradient(transparent, rgb(0 0 0 / 50%));
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 25px;
-  z-index: auto;
-}
-
-.forward {
-  z-index: 1;
 }
