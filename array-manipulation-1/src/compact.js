@@ -12,7 +12,7 @@ return output array
 function compact(array) {
   var returnArray = [];
   for (var i = 0; i < array.length; i++) {
-    if (array[i] !== false && array[i] !== null && array[i] !== '' && array[i] !== 0 && array[i] !== undefined && !Number.isNaN(array[i])) {
+    if (array[i]) {
       returnArray.push(array[i]);
     }
   }
