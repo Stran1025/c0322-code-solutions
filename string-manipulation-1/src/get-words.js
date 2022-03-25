@@ -18,18 +18,18 @@ return array
 function getWords(string) {
   var returnArray = [];
   var word = '';
+  if (string.length === 0) {
+    return returnArray;
+  }
   for (var i = 0; i < string.length; i++) {
     if (string[i] !== ' ') {
       word += string[i];
-    }
-    if (string[i] === ' ') {
+    } else {
       returnArray.push(word);
       word = '';
     }
-    if (i === string.length - 1) {
-      returnArray.push(word);
-    }
   }
+  returnArray.push(word);
   return returnArray;
 }
 
