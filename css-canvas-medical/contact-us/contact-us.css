@@ -1,9 +1,14 @@
-input {
+textarea {
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid rgb(177 177 177);
+  color: rgb(213 211 209);
 }
+
+/* div {
+  border: 1px dashed blue;
+} */
 
 .heading-color {
   color: rgb(80 81 79);
@@ -11,4 +16,8 @@ input {
 
 .number-color {
   color: rgb(10 71 111);
+}
+
+.bottom-padding {
+  padding-bottom: 20px;
 }
