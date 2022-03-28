@@ -10,11 +10,14 @@ return output object
 */
 
 function omit(source, keys) {
-  var output = source;
+  var output = {};
   for (var prop in source) {
+    output[prop] = source[prop];
+  }
+  for (var key in output) {
     for (var i = 0; i < keys.length; i++) {
-      if (prop === keys[i]) {
-        delete output[prop];
+      if (key === keys[i]) {
+        delete output[key];
       }
     }
   }
