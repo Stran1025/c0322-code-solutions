@@ -1,9 +1,10 @@
 /*
 assign variable count to 0
+select the dom for the button and the display of the click counts
 add an eventlistener for everytime the button is click
 in the call back funtion increment the count by 1 everytime the button is click
 change the text content of clickcount to match the number of clicks
-
+depending on the number of click update how the button look
 */
 var count = 0;
 var $hotButton = document.querySelector('.hot-button');
