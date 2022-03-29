@@ -1,0 +1,50 @@
+* {
+  font-family: serif;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.center {
+  margin: auto;
+}
+
+.vertical-center {
+  height: 100vh;
+  align-items: center;
+}
+
+h1 {
+  width: 900px;
+  text-align: center;
+}
+
+span {
+  padding-bottom: 10px;
+  margin: -3px;
+  font-size: 40px;
+  display: inline;
+  box-sizing: content-box;
+}
+
+.current-letter {
+  border-bottom: 3px solid black;
+}
+
+.passed-letter {
+  color: rgb(24 205 27);
+}
+
+.incorrect-letter {
+  color: rgb(248 6 6);
+}
+
+.space {
+  margin: 5px;
+}
