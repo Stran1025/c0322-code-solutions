@@ -1,0 +1,63 @@
+.container {
+  margin: auto;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.height-100 {
+  height: 100vh;
+}
+
+.height-center {
+  align-items: center;
+}
+
+button {
+  position: relative;
+  top: 10px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgb(254 249 241);
+  border-radius: 50%;
+}
+
+div.button-container {
+  width: 210px;
+  height: 210px;
+  border: 1px solid rgb(254 249 241);
+  border-radius: 50%;
+  margin: auto;
+}
+
+div.light-on {
+  background-color: rgb(254 249 241);
+}
+
+button.light-on {
+  background-color: rgb(250 234 132);
+}
+
+div.light-off {
+  background-color: rgb(17 17 17);
+}
+
+button.light-off {
+  background-color: rgb(37 37 37);
+  border: 1px solid rgb(17 17 17);
+}
+
+div.button-container.light-off {
+  background-color: rgb(12 12 12);
+  border-color: rgb(12 12 12);
+}
