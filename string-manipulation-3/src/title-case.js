@@ -34,18 +34,11 @@ function titleCase(string) {
   var array = lowercase.split(' ');
   var doNotCapitalize = ['and', 'or', 'nor', 'but', 'a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to'];
   for (var i = 0; i < array.length; i++) {
-    if (i === 0) {
-      if (array[i] === 'javascript:') {
-        word += 'JavaScript: ';
-        i++;
+    if (array[i].length <= 3) {
+      if (i === 0) {
         word += array[i][0].toUpperCase() + array[i].substring(1) + ' ';
         continue;
       }
-      word = array[i][0].toUpperCase() + array[i].substring(1);
-      output += word;
-      word = ' ';
-      continue;
-    } else if (array[i].length <= 3) {
       for (var j = 0; j < doNotCapitalize.length; j++) {
         if (array[i] === doNotCapitalize[j]) {
           word += array[i];
