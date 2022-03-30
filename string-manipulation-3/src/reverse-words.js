@@ -16,11 +16,11 @@ function reverseWords(string) {
   var word = '';
   var array = string.split(' ');
   for (var i = 0; i < array.length; i++) {
-    for (var j = array[i] - 1; j >= 0; j--) {
+    for (var j = array[i].length - 1; j >= 0; j--) {
       word += array[i][j];
     }
-    output = word + ' ';
+    output = output + word;
+    word = ' ';
   }
-  output += word;
   return output;
 }
