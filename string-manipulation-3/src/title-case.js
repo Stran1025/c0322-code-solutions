@@ -11,6 +11,7 @@ if the word is 4 or more character
  add it to the word string
  then add the rest of the letter in lowercase
  unless the letter is after a -
+  if the last character of the word is : the next word should be capitalize regardless
  capitalize the next letter and then skip the next iteration (++ in the code)
 and then for the word with 3 or less letter
   unless it the first letter in the sentence
