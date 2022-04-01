@@ -29,6 +29,7 @@ Assign an empty array as output
     the object should have the player name as one property
     the object should have an empty array as the player hand
     push the object into the output playerbase array
+    remove the card that was push from the input array
     repeate until the end of the input array
 return output array
 
@@ -56,25 +57,33 @@ add the total points of their hand
 return the playerbase with total points attach to them
 
 Find the winner
-sset the first player as the current winner
+create an array for the list of winner
+set the first player as the current winner
 for each player in the game
   check if that player have more points than the current winner
-  if that player have more points declare that player the new current winner
-  if the player doesnt have more points do nothing
-after all the players is check return the current winner;
+  if that player have more points
+    declare that player the new current winner
+  if that player have the same ammount of points
+    add that player to the winner list
+  if the player doesnt have more points
+    do nothing
+after all the players is check return the list of winner;
 
 Putting all the pieces together
 take in
   an array with all the participants names
   a number for how many cards each participants will get
     if not specify will default to 2
+set up a string as a return message to declare the winner
 set up the players and give them hands
 create a deck
 shuffle the deck
 deal specify amount of cards to the players
 tally up all the points in each player hand
 declare the winner as the player with the most points in hand
-return the winner
+  if there are only 1 winner
+    return the winner
+  if there are more than 1 winner declare a tie
 */
 
 function createDeck() {
@@ -100,6 +109,7 @@ function shuffle(deck) {
     var random = Math.random() * deck.length;
     var number = Math.trunc(random);
     shuffledDeck.push(deck[number]);
+    deck.splice(number, 1);
   }
   return shuffledDeck;
 }
@@ -141,23 +151,44 @@ function totalPoint(players) {
 }
 
 function findWinner(players) {
-  var winner = players[0];
-  for (var i = 0; i < players.length; i++) {
-    if (players[i].point > winner.point) {
-      winner = players[i];
+  var winner = [players[0]];
+  for (var i = 1; i < players.length; i++) {
+    if (players[i].point > winner[0].point) {
+      winner = [players[i]];
+    } else if (players[i].point === winner[0].point) {
+      winner.push(players[i]);
     }
   }
   return winner;
 }
 
 function runGame(array, number) {
+  if (array === undefined || !array.length) {
+    return 'Please enter players';
+  }
+  var returnMsg = 'There is a tie between';
   var players = setupPlayers(array);
   var deck = createDeck();
   deck = shuffle(deck);
   dealCardToPlayer(players, deck, number);
   totalPoint(players);
   var winner = findWinner(players);
-  return 'And the Winner is ' + winner.name + ' with ' + winner.point + ' points!!';
+  if (winner.length === 1) {
+    returnMsg = 'The Winner is ' + winner[0].name + ' with ' + winner[0].point + ' points!!';
+    return returnMsg;
+  } else {
+    for (var i = 0; i < winner.length; i++) {
+      returnMsg += ' ' + winner[i].name + ' and';
+    }
+    returnMsg += ' with them having ' + winner[0].point + ' points!!';
+    return returnMsg;
+  }
 }
 
-runGame(['Pikachu', 'Charmander', 'Bulbasaur', 'Squirtle']);
+console.log('value of runGame with no number input:', runGame(['Pikachu', 'Charmander', 'Bulbasaur', 'Squirtle']));
+console.log('value of runGame with 1 as number input:', runGame(['Pikachu', 'Charmander', 'Bulbasaur', 'Squirtle'], 1));
+console.log('value of runGame with 2 as number input:', runGame(['Pikachu', 'Charmander', 'Bulbasaur', 'Squirtle'], 2));
+console.log('value of runGame with 3 as number input:', runGame(['Pikachu', 'Charmander', 'Bulbasaur', 'Squirtle'], 3));
+console.log('value of runGame with no array input:', runGame());
+console.log('value of runGame with {} as array input:', runGame({}));
+console.log('value of runGame with [\'loner\'] array input:', runGame(['loner']));
