@@ -1,0 +1,17 @@
+input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgb(177 177 177);
+  color: rgb(213 211 209);
+  width: 60%;
+}
+
+.heading-color {
+  color: rgb(80 81 114));
+}
+
+.article-title {
+  color: rgb(10 66 101);
+  font-size: 22px;
+}
