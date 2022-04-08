@@ -1,0 +1,27 @@
+.overlay {
+  background: linear-gradient(transparent, rgb(0 0 0 / 50%));
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 25px;
+  z-index: auto;
+}
+
+.layer-element {
+  top: 150px;
+  right: 40%;
+  left: 10%;
+}
+
+img.headshot,
+.circle {
+  width: 150px;
+  height: 150px;
+  border: none;
+  border-radius: 50%;
+}
+
+body {
+  background-color: rgb(250 250 250);
+}

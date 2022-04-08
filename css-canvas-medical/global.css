@@ -20,6 +20,10 @@ body {
   width: 50%;
 }
 
+.col-third {
+  width: 33%;
+}
+
 .col-fourth {
   width: 25%;
 }
