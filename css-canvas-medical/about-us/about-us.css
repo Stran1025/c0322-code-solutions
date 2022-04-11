@@ -22,10 +22,6 @@ img.headshot,
   border-radius: 50%;
 }
 
-body {
-  background-color: rgb(250 250 250);
-}
-
 .section-title {
   color: rgb(80 81 79);
 }
@@ -46,4 +42,8 @@ a.custom-color {
 
 .member-role {
   font-size: 12px;
+}
+
+.bottom-space {
+  margin-bottom: 40px;
 }
