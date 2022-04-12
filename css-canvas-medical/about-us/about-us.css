@@ -1,0 +1,49 @@
+.overlay {
+  background: linear-gradient(transparent, rgb(0 0 0 / 50%));
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 25px;
+  z-index: auto;
+}
+
+.layer-element {
+  top: 150px;
+  right: 40%;
+  left: 10%;
+}
+
+img.headshot,
+.circle {
+  width: 150px;
+  height: 150px;
+  border: none;
+  border-radius: 50%;
+}
+
+.section-title {
+  color: rgb(80 81 79);
+}
+
+.section-center {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+a.custom-color {
+  color: rgb(51 84 122);
+}
+
+.member-name {
+  color: rgb(98 81 79);
+  font-size: 20px;
+}
+
+.member-role {
+  font-size: 12px;
+}
+
+.bottom-space {
+  margin-bottom: 40px;
+}

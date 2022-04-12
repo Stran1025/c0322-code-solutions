@@ -20,6 +20,10 @@ body {
   width: 50%;
 }
 
+.col-third {
+  width: 33%;
+}
+
 .col-fourth {
   width: 25%;
 }
@@ -108,6 +112,14 @@ body {
 
 .font-18 {
   font-size: 18px;
+}
+
+.font-15 {
+  font-size: 15px;
+}
+
+.font-14 {
+  font-size: 14px;
 }
 
 .font-13 {
