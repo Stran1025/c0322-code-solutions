@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="view col-full text-center center-height" data-view="1">
+        <i class="fas fa-angle-left fa-5x left-icon" data-view="5"></i>
+        <img src="images/001.png" alt="">
+        <i class="fas fa-angle-right fa-5x right-icon" data-view="2"></i>
+      </div>
+      <div class="view col-full text-center center-height hidden" data-view="2">
+        <i class="fas fa-angle-left fa-5x left-icon" data-view="1"></i>
+        <img src="images/004.png" alt="">
+        <i class="fas fa-angle-right fa-5x right-icon" data-view="3"></i>
+      </div>
+      <div class="view col-full text-center center-height hidden" data-view="3">
+        <i class="fas fa-angle-left fa-5x left-icon" data-view="2"></i>
+        <img src="images/007.png" alt="">
+        <i class="fas fa-angle-right fa-5x right-icon" data-view="4"></i>
+      </div>
+      <div class="view col-full text-center center-height hidden" data-view="4">
+        <i class="fas fa-angle-left fa-5x left-icon" data-view="3"></i>
+        <img src="images/025.png" alt="">
+        <i class="fas fa-angle-right fa-5x right-icon" data-view="5"></i>
+      </div>
+      <div class="view col-full text-center center-height hidden" data-view="5">
+        <i class="fas fa-angle-left fa-5x left-icon" data-view="4"></i>
+        <img src="images/039.png" alt="">
+        <i class="fas fa-angle-right fa-5x right-icon" data-view="1"></i>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-full text-center">
+        <i class="progress-circle fas fa-circle fa-2x" data-view="1"></i>
+        <i class="progress-circle far fa-circle fa-2x" data-view="2"></i>
+        <i class="progress-circle far fa-circle fa-2x" data-view="3"></i>
+        <i class="progress-circle far fa-circle fa-2x" data-view="4"></i>
+        <i class="progress-circle far fa-circle fa-2x" data-view="5"></i>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
