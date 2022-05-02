@@ -39,3 +39,31 @@
 // xhrTrivia.responseType = 'json';
 // xhrTrivia.addEventListener('load', test);
 // xhrTrivia.send();
+
+// var data = {
+//   name: 'TJ',
+//   job: {
+//     employer: 'LearningFuze',
+//     title: 'Program Manager'
+//   }
+// };
+// function getIn(property, obj) {
+//   var output = obj;
+//   var prop = property.split('.');
+//   for (var i = 0; i < prop.length; i++) {
+//     output = output[prop[i]];
+//   }
+//   return output;
+// }
+
+// function charCounts(str) {
+//   var output = {};
+//   for (var i = 0; i < str.length; i++) {
+//     if (output[str[i]] === undefined) {
+//       output[str[i]] = 1;
+//     } else {
+//       output[str[i]] += 1;
+//     }
+//   }
+//   return output;
+// }
