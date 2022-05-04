@@ -1,11 +1,18 @@
 const fs = require('fs');
 
-for (let i = 2; i < process.argv.length; i++) {
-  fs.readFile(process.argv[i], 'utf-8', (err, data) => {
+let count = 2;
+read(count);
+
+function read(num) {
+  fs.readFile(process.argv[num], 'utf-8', (err, data) => {
     if (err) {
-      console.log(err);
-    } else {
-      console.log(data);
+      console.error(err);
+      process.exit();
+    }
+    console.log(data);
+    count++;
+    if (count < process.argv.length) {
+      read(count);
     }
   });
 }
