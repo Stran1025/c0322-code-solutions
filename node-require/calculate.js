@@ -11,4 +11,6 @@ if (process.argv[process.argv.length - 2] === 'plus') {
   console.log(`result: ${time.multiply(parseInt(process.argv[process.argv.length - 3]), parseInt(process.argv[process.argv.length - 1]))}`);
 } else if (process.argv[process.argv.length - 2] === 'over') {
   console.log(`result: ${over.divide(parseInt(process.argv[process.argv.length - 3]), parseInt(process.argv[process.argv.length - 1]))}`);
+} else {
+  console.log('Invalid inputs');
 }
