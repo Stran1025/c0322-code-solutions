@@ -4,13 +4,13 @@ const time = require('./multiply');
 const over = require('./divide');
 
 if (process.argv[process.argv.length - 2] === 'plus') {
-  console.log(`result: ${plus.add(parseInt(process.argv[process.argv.length - 3]), parseInt(process.argv[process.argv.length - 1]))}`);
+  console.log(`result: ${plus(parseInt(process.argv[process.argv.length - 3]), parseInt(process.argv[process.argv.length - 1]))}`);
 } else if (process.argv[process.argv.length - 2] === 'minus') {
-  console.log(`result: ${minus.subtract(parseInt(process.argv[process.argv.length - 3]), parseInt(process.argv[process.argv.length - 1]))}`);
+  console.log(`result: ${minus(parseInt(process.argv[process.argv.length - 3]), parseInt(process.argv[process.argv.length - 1]))}`);
 } else if (process.argv[process.argv.length - 2] === 'time') {
-  console.log(`result: ${time.multiply(parseInt(process.argv[process.argv.length - 3]), parseInt(process.argv[process.argv.length - 1]))}`);
+  console.log(`result: ${time(parseInt(process.argv[process.argv.length - 3]), parseInt(process.argv[process.argv.length - 1]))}`);
 } else if (process.argv[process.argv.length - 2] === 'over') {
-  console.log(`result: ${over.divide(parseInt(process.argv[process.argv.length - 3]), parseInt(process.argv[process.argv.length - 1]))}`);
+  console.log(`result: ${over(parseInt(process.argv[process.argv.length - 3]), parseInt(process.argv[process.argv.length - 1]))}`);
 } else {
   console.log('Invalid inputs');
 }
