@@ -24,12 +24,33 @@ app.get('/api/notes/:id', (req, res) => {
   res.json(data.notes[req.params.id]);
 });
 
+app.delete('/api/notes/:id', (req, res) => {
+  if (isNaN(parseInt(req.params.id))) {
+    const error = { error: `the id need to be a number, ${req.params.id} is not a number` };
+    res.status(400).json(error);
+    return;
+  } else if (!data.notes[req.params.id]) {
+    const error = { error: `cannot find note with id of ${req.params.id}` };
+    res.status(404).json(error);
+    return;
+  }
+  delete data.notes[req.params.id];
+  fs.writeFile('./data.json', JSON.stringify(data, null, 2), err => {
+    if (err) {
+      const error = { error: 'An unexpected error occurred' };
+      res.status(500).json(error);
+    }
+  });
+  res.status(204).send();
+});
+
 app.use(express.json());
 
 app.post('/api/notes', (req, res) => {
   if (!req.body.content) {
     const error = { error: 'content is a require field' };
     res.status(400).json(error);
+    return;
   }
   req.body.id = data.nextId;
   data.notes[data.nextId] = req.body;
@@ -37,7 +58,8 @@ app.post('/api/notes', (req, res) => {
   data.nextId++;
   fs.writeFile('./data.json', JSON.stringify(data, null, 2), err => {
     if (err) {
-      process.stderr.write(err);
+      const error = { error: 'An unexpected error occurred' };
+      res.status(500).json(error);
     }
   });
 });
