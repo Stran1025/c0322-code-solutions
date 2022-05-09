@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const data = require('./data.json');
+const fs = require('fs');
 
 app.get('/api/notes', (req, res) => {
   const notesArray = [];
@@ -21,6 +22,24 @@ app.get('/api/notes/:id', (req, res) => {
     return;
   }
   res.json(data.notes[req.params.id]);
+});
+
+app.use(express.json());
+
+app.post('/api/notes', (req, res) => {
+  if (!req.body.content) {
+    const error = { error: 'content is a require field' };
+    res.status(400).json(error);
+  }
+  req.body.id = data.nextId;
+  data.notes[data.nextId] = req.body;
+  res.status(201).json(data.notes[data.nextId]);
+  data.nextId++;
+  fs.writeFile('./data.json', JSON.stringify(data, null, 2), err => {
+    if (err) {
+      process.stderr.write(err);
+    }
+  });
 });
 
 app.listen(3000, () => {
