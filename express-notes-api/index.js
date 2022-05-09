@@ -78,7 +78,7 @@ app.put('/api/notes/:id', (req, res) => {
     res.status(400).json(error);
     return;
   }
-  req.body.id = req.params.id;
+  req.body.id = parseInt(req.params.id);
   data.notes[req.params.id] = req.body;
   fs.writeFile('./data.json', JSON.stringify(data, null, 2), err => {
     if (err) {
