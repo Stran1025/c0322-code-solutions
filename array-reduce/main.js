@@ -18,7 +18,7 @@ const traits = [
 ];
 
 console.log('sum', numbers.reduce((previousValue, currentValue) => previousValue + currentValue, 0));
-console.log('product', numbers.reduce((previousValue, currentValue) => previousValue * currentValue, 0));
+console.log('product', numbers.reduce((previousValue, currentValue) => previousValue * currentValue, 1));
 console.log('balance', account.reduce((previousValue, currentValue) => {
   if (currentValue.type === 'deposit') {
     return previousValue + currentValue.amount;
