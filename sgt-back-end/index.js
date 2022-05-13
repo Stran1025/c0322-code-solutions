@@ -22,7 +22,6 @@ app.get('/api/grades', (req, res) => {
     .catch(err => {
       res.send(500).json(unexpectedError);
       process.stderr.write(err);
-      process.exit(1);
     });
 });
 
@@ -48,7 +47,6 @@ app.delete('/api/grades/:id', (req, res) => {
     .catch(err => {
       res.status(500).json(unexpectedError);
       process.stderr.write(err);
-      process.exit(1);
     });
 });
 
@@ -91,7 +89,6 @@ app.put('/api/grades/:id', (req, res) => {
     .catch(err => {
       res.status(500).json(unexpectedError);
       process.stderr.write(err);
-      process.exit(1);
     });
 });
 
@@ -119,7 +116,6 @@ app.post('/api/grades', (req, res) => {
     .catch(err => {
       res.status(500).json(unexpectedError);
       process.stderr.write(err);
-      process.exit(1);
     });
 });
 
