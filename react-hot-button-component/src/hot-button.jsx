@@ -34,4 +34,4 @@ class HotButton extends React.Component {
   }
 }
 
-export default <HotButton/>;
+export default HotButton;
