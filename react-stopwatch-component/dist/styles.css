@@ -1,0 +1,15 @@
+.circle {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  width: 100px;
+  text-align: center;
+  margin-top: 20px;
+}
