@@ -26,15 +26,19 @@ class ValidatedInput extends React.Component {
   }
 
   render() {
+    let color = 'red';
     let icon = 'fa-x';
     if (this.state.response === '') {
       icon = 'fa-check';
+      color = 'green';
     }
     return (
       <form>
         <label htmlFor='password' className='block'>Password</label>
         <input id='password' className='for-fun' type="password" value={this.state.password} onChange={this.handleChange}></input>
-        <i className={'fas ' + icon}></i>
+        <span className={color}>
+          <i className={'fas ' + icon}></i>
+        </span>
         <p>{this.state.response}</p>
       </form>
     );
