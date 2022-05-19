@@ -4,11 +4,18 @@ class AppDrawer extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isOpen: false };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleOpeningClick = this.handleOpeningClick.bind(this);
+    this.handleClosingClick = this.handleClosingClick.bind(this);
   }
 
-  handleClick() {
-    this.setState({ isOpen: !this.state.isOpen });
+  handleOpeningClick() {
+    this.setState({ isOpen: true });
+  }
+
+  handleClosingClick() {
+    if (this.state.isOpen) {
+      this.setState({ isOpen: false });
+    }
   }
 
   render() {
@@ -23,16 +30,16 @@ class AppDrawer extends React.Component {
       bar = 'close';
     }
     return (
-      <div className='container' onClick={this.handleClick}>
+      <div className='container' onClick={this.handleClosingClick}>
         <div className={'overlay ' + overlay}></div>
         <div className='row front'>
-        <i className={'fas fa-bars fa-xl top-space icon ' + hide} onClick={this.handleClick}></i>
+        <i className={'fas fa-bars fa-xl top-space icon ' + hide} onClick={this.handleOpeningClick}></i>
           <div className={'col-fourth drawer front ' + bar}>
             <h1>Choose a Game</h1>
-            <a className=''>League of Legends</a>
-            <a className=''>Valorant</a>
-            <a className=''>Legend of Runetera</a>
-            <a className=''>Teamfight Tactic</a>
+            <a className='link' onClick={this.handleClosingClick}>League of Legends</a>
+            <a className='link' onClick={this.handleClosingClick}>Valorant</a>
+            <a className='link' onClick={this.handleClosingClick}>Legend of Runetera</a>
+            <a className='link' onClick={this.handleClosingClick}>Teamfight Tactic</a>
           </div>
         </div>
       </div>
