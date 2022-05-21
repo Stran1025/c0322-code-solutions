@@ -10,6 +10,7 @@ class Carousel extends React.Component {
     this.handleLeft = this.handleLeft.bind(this);
     this.handleRight = this.handleRight.bind(this);
     this.weewoo = setInterval(this.handleRight, 5000);
+    this.handleDot = this.handleDot.bind(this);
   }
 
   handleLeft() {
@@ -36,6 +37,10 @@ class Carousel extends React.Component {
     this.setState({ currentImg: index });
   }
 
+  handleDot(event) {
+    this.setState({ currentImg: parseInt(event.target.getAttribute('data-index')) });
+  }
+
   render() {
     return (
       <div>
@@ -60,7 +65,7 @@ class Carousel extends React.Component {
             if (this.state.currentImg === index) {
               active = 'active';
             }
-            return <div key={index} className={'dot ' + active}></div>;
+            return <div key={index} data-index={index} className={'dot ' + active} onClick={this.handleDot}></div>;
           })}
         </div>
       </div>
