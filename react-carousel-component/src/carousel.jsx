@@ -38,20 +38,31 @@ class Carousel extends React.Component {
 
   render() {
     return (
-      <div className='carousel flex'>
-        <i className='fas fa-angle-left fa-2xl left' onClick={this.handleLeft}></i>
-        {this.props.input.map((img, index) => {
-          let active = 'hidden';
-          if (index === this.state.currentImg) {
-            active = '';
-          }
-          return (
-            <div key={index} className={'holder ' + active}>
-              <Image url={img.url} />
-            </div>
-          );
-        })}
-        <i className='fas fa-angle-right fa-2xl right' onClick={this.handleRight}></i>
+      <div>
+        <div className='carousel flex'>
+          <i className='fas fa-angle-left fa-2xl left' onClick={this.handleLeft}></i>
+          {this.props.input.map((img, index) => {
+            let active = 'hidden';
+            if (index === this.state.currentImg) {
+              active = '';
+            }
+            return (
+              <div key={index} className={'holder ' + active}>
+                <Image url={img.url} />
+              </div>
+            );
+          })}
+          <i className='fas fa-angle-right fa-2xl right' onClick={this.handleRight}></i>
+        </div>
+        <div className='dot-holder'>
+          {this.props.input.map((img, index) => {
+            let active = '';
+            if (this.state.currentImg === index) {
+              active = 'active';
+            }
+            return <div key={index} className={'dot ' + active}></div>;
+          })}
+        </div>
       </div>
     );
   }
