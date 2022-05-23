@@ -44,7 +44,7 @@ export default class App extends React.Component {
     * of the old array, plus the object returned by the server.
     */
 
-    const todos = this.state.todos;
+    const todos = this.state.todos.slice();
     fetch('/api/todos', {
       method: 'POST',
       body: JSON.stringify(newTodo),
@@ -95,7 +95,7 @@ export default class App extends React.Component {
         })
           .then(res => res.json())
           .then(data => {
-            const todos = this.state.todos;
+            const todos = this.state.todos.slice();
             todos[i] = data;
             this.setState({ todos: todos });
           })
