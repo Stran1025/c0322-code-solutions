@@ -17,7 +17,7 @@ class App extends React.Component {
       .then(data => {
         this.setState({ users: data, isLoading: false });
       })
-      .catch(err => process.stderr.write('Error:', err));
+      .catch(err => console.error('Error:', err));
   }
 
   render() {
