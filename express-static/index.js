@@ -3,10 +3,10 @@ const path = require('path');
 
 const app = express();
 
-const absolutePath = path.join('__dirname', 'public');
+const absolutePath = path.join(__dirname, 'public');
 console.log(absolutePath);
 
-const staticMiddleware = express.static('public');
+const staticMiddleware = express.static(absolutePath);
 
 app.use(staticMiddleware);
 
