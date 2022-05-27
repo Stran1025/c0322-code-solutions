@@ -1,0 +1,56 @@
+## User can sign up
+  The user click on the 'Sign Up' button or 'Resgister Now' link
+  The client re-render the page to the register an account page
+  The user input a unique username and password
+  On the click submit button 'Register', the client sent network request using fetch
+    Method is 'POST'
+    Body is a JSON stringified object
+    And the URL is /api/auth/sign-up
+  Once the server recieved the POST request
+    It will check if the user had leave the password or username empty
+      If either is empty it throw and error at the client
+    It will hashed the password
+    Then insert the newly created username and the hashed password into the data base
+    Giving back the username, userId and createdAt infomation about the created account
+  Once the client recieved the respond
+    It will change the location of the site to 'sign-in'
+  The users will see the login forms need to enter their credentials
+
+## User can sign in
+  When the user 'landed' on the home page
+    It will check if the user is logged in through the use of tokens
+    If the user is not logged in it will take the user to the 'sign-in' page
+  The user must enter their credentials of username and password
+  When the user click submit button 'Log In', the client send a network request using fetch
+    Method is 'POST
+    Body is a JSON stringified object with the user's username and password
+    and the URL is /api/auth/sign-in
+  When the server recieved the request
+    If the username or password is left empty. It will throw an error at the client
+    It will search the database for an account with matching username
+      if there are no user with the matching username. It will throw an error at the client
+    It will verify that the input password is correct
+      if the password is incorrect. It will throw an error at the client
+    If the password is correct
+      It will send back a respond to the client with the token for the user and their username
+  When the client recieved the respond and save the token to local storage
+  The client will re-render the page to the home page of the application
+  The User are free to interact with the app within the juristiction of their given permissions
+
+## User can stay sign in
+  When the user reload or leave the page their login token is saved to localstorage
+  When they launch the site the client make a request with the token included
+  (For this exercise it was actually parse in the client without checking with the server)
+  When the server recieved the request it will check if the token is valid
+    if the token is valid it will parse the token into the user object and return it to the client
+    if the token is not valid or not there, server will send back a null respond
+  When the client recieved the respond
+    if There is a user object in the response it will log in
+    if not it will change to the 'sign-in' page for the user to sign in
+
+## User can sign-out
+  When the user is logged in and hit the 'Sign Out' button
+  the localstorage for the token is removed
+  the state of the page is change to 'sign-in'
+  the client re-render the page to the login page
+  The User is prompted to log in if they want to use the app.
