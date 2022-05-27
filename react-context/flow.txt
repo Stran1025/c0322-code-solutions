@@ -13,7 +13,8 @@
     Then insert the newly created username and the hashed password into the data base
     Giving back the username, userId and createdAt infomation about the created account
   Once the client recieved the respond
-    It will change the location of the site to 'sign-in'
+    It will change the location of the site to 'sign-in' by setting the hash on the location to 'sign-in'
+    This will start the process of rendering the page again this time with the path value equal to 'sign-in'
   The users will see the login forms need to enter their credentials
 
 ## User can sign in
@@ -23,8 +24,18 @@
     If there is a token, the client then parse the token into a user object
     If there is no token, the client will set the user object to null
     the the client would re-render the page based on the value of the user object
-    If there is a user the client automatically login and the client render the home page of the app
-    If the the User object is null the client render the auth forms with the sign-in path
+      If there is a user the client
+        the client render the home page of the app
+        home page check if there is a user object
+        returning the div for the home page
+      If the the User object is null
+        the client also re-render the home page since the path is still an emtry string
+        home page check if there is a user object
+        with the use of redirect component the page changes the url to the website
+        which include a path name that will turn into hash in the link
+        once the url is replaced the site will 'load' which is another render of the app from the beginning
+        this time the route of the site is 'sign-in'
+        and then render the auth and auth forms with the sign-in path
   The user must enter their credentials of username and password
   When the user click submit button 'Log In', the client send a network request using fetch
     Method is 'POST
@@ -42,10 +53,18 @@
     The client will re-render the page based on if the respond from the server contain a user object
     If there is a user object in the response, the client will re-render the state of the page
       using the setState method with the user object as arguement
-  When there is a user object, The client will re-render the page to the home page of the application
-    The User are free to interact with the app within the juristiction of their given permissions
-  Or else it will re-render the sign-in page
-    and the user have to repeat the process of login in
+      If there is a user the client
+        the client render the home page of the app
+        home page check if there is a user object
+        returning the div for the home page
+      If the the User object is null
+        the client also re-render the home page
+        home page check if there is a user object
+        with the use of redirect component the page changes the url to the website
+        which include a path name that will turn into hash in the link
+        once the url is replaced the site will 'load' which is another render of the app from the beginning
+        this time the route of the site is 'sign-in'
+        and then render the auth and auth forms with the sign-in path
 
 ## User can stay sign in
   When the user reload or leave the page their login token is saved to localstorage
@@ -54,13 +73,31 @@
   The token is then parse into a user object if applicable
   Or else the user object will be null
   Then the state of the app is change by the setState method and call for a re-render of the page
-    If there is a user the client automatically login and the client render the home page of the app
-    If the the User object is null the client render the auth forms with the sign-in path
+      If there is a user the client
+        the client render the home page of the app
+        home page check if there is a user object
+        returning the div for the home page
+      If the the User object is null
+        the client also re-render the home page since the path is still an emtry string
+        home page check if there is a user object
+        with the use of redirect component the page changes the url to the website
+        which include a path name that will turn into hash in the link
+        once the url is replaced the site will 'load' which is another render of the app from the beginning
+        this time the route of the site is 'sign-in'
+        and then render the auth and auth forms with the sign-in path
 
 ## User can sign-out
   When the user is logged in and hit the 'Sign Out' button
   the localstorage for the token is removed
   the state of the page is change through the setState method with the user is null as arguement
   The page will re-render with the updated user as null and render the auth forms with the sign-in path
+  the client also re-render the home page
+  home page check if there is a user object
+  since there is no longer a user object
+  with the use of redirect component the page changes the url to the website
+  which include a path name that will turn into hash in the link
+  once the url is replaced the site will 'load' which is another render of the app from the beginning
+  this time the route of the site is 'sign-in'
+  and then render the auth and auth forms with the sign-in path
   the client re-render the page to the login page
   The User is prompted to log in if they want to use the app.
