@@ -18,8 +18,13 @@
 
 ## User can sign in
   When the user 'landed' on the home page
-    It will check if the user is logged in through the use of tokens
-    If the user is not logged in it will take the user to the 'sign-in' page
+  After the first render of the home page, the client call the componentDidMount method
+    It will check if the user is logged in through the use of tokens in the local storage
+    If there is a token, the client then parse the token into a user object
+    If there is no token, the client will set the user object to null
+    the the client would re-render the page based on the value of the user object
+    If there is a user the client automatically login and the client render the home page of the app
+    If the the User object is null the client render the auth forms with the sign-in path
   The user must enter their credentials of username and password
   When the user click submit button 'Log In', the client send a network request using fetch
     Method is 'POST
@@ -34,23 +39,28 @@
     If the password is correct
       It will send back a respond to the client with the token for the user and their username
   When the client recieved the respond and save the token to local storage
-  The client will re-render the page to the home page of the application
-  The User are free to interact with the app within the juristiction of their given permissions
+    The client will re-render the page based on if the respond from the server contain a user object
+    If there is a user object in the response, the client will re-render the state of the page
+      using the setState method with the user object as arguement
+  When there is a user object, The client will re-render the page to the home page of the application
+    The User are free to interact with the app within the juristiction of their given permissions
+  Or else it will re-render the sign-in page
+    and the user have to repeat the process of login in
 
 ## User can stay sign in
   When the user reload or leave the page their login token is saved to localstorage
-  When they launch the site the client make a request with the token included
-  (For this exercise it was actually parse in the client without checking with the server)
-  When the server recieved the request it will check if the token is valid
-    if the token is valid it will parse the token into the user object and return it to the client
-    if the token is not valid or not there, server will send back a null respond
-  When the client recieved the respond
-    if There is a user object in the response it will log in
-    if not it will change to the 'sign-in' page for the user to sign in
+  The page will render with out the using the token and with the user obj as null
+  After the page is done rendering the componentDidMount method is automatically call
+  The token is then parse into a user object if applicable
+  Or else the user object will be null
+  Then the state of the app is change by the setState method and call for a re-render of the page
+    If there is a user the client automatically login and the client render the home page of the app
+    If the the User object is null the client render the auth forms with the sign-in path
 
 ## User can sign-out
   When the user is logged in and hit the 'Sign Out' button
   the localstorage for the token is removed
-  the state of the page is change to 'sign-in'
+  the state of the page is change through the setState method with the user is null as arguement
+  The page will re-render with the updated user as null and render the auth forms with the sign-in path
   the client re-render the page to the login page
   The User is prompted to log in if they want to use the app.
